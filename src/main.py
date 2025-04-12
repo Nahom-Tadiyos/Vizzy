@@ -1,7 +1,6 @@
 import pandas as pd
 from customtkinter import *
 import customtkinter as ct
-import tktable as tb
 
 selected_graph_type = None
 filename = "No file uploaded"
@@ -30,10 +29,6 @@ def selectGraphCombo(choice):
     global selected_graph_type
     selected_graph_type = choice
     print("Selected graph type:", selected_graph_type)
-
-def previewData():
-     tb.Table()
-
 
 uploadFilebtn = ct.CTkButton(app, text="Upload CSV", command=load_csv)
 uploadFilebtn.pack()
