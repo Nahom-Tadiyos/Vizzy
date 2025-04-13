@@ -19,8 +19,8 @@ def load_csv():
     if filename.endswith('.csv'):
         data = pd.read_csv(filename)
         filename_text.configure(text=filename if filename else "No file uploaded")
-        preview_box.delete("0.0", "end")
-        preview_box.insert("0.0", data.head().to_string())
+        preview_box.delete("0.0", "end") #Delete everything inside the box
+        preview_box.insert("0.0", data.head().to_string()) #Prints the df.head
         no_data_label.configure(text="")
     else:
         filename_text.configure(text="Please upload a CSV file.")
